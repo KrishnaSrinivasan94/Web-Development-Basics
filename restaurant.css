@@ -1,0 +1,157 @@
+/* Body background color is lightblue.*/
+body {
+	background-color:lightblue;
+}
+
+/* Heading is centered and is red */
+h1 {
+	text-align:center;
+	color:red;
+}
+
+/* Div for  Billing information area. Black background-color, width od 25% and float to left of page. The text is aligned at the center and is red */ 
+#billing {
+	width:25%;
+	float:left;
+	height:600px;
+    background-color:black;
+	color:red;
+	text-align:center;
+}
+
+/* Div for Address info area. Yellow background colot, width of 25% and float right so it appears to the right of the page. */ 
+#details {
+	width:25%;
+	float:right;
+	height:600px;
+	background-color:yellow;
+	text-align:center;
+}
+
+/* Div for the submit button. Align text at the center, height of 100px and a width of 50% to align it below the menu. Margins autp to center it on the page.
+   Orange background color */
+#submit {
+	padding-top:50px;
+	box-sizing:border-box;
+	height:100px;
+	text-align:center;
+	margin:auto;
+	width:50%;
+	background-color:orange;
+}
+
+/*Div for the menu. Pink background color . Margin auto to center this div on the page. Width of 50% to fit it between address and billing divs.*/
+#menu {
+	background-color:pink;'
+	text-align:center;
+	color:purple;
+	margin:auto;
+	height:205px;
+	width:50%;
+	border:5px solid;
+	box-sizing:border-box;
+	
+}
+
+/* Div for the total amount to be dispalyed. Red text, aqua background color. Centred with margin:Auto and text within this div is centred too. 50% width */
+#total {
+	background-color:aqua;
+	color:red;
+	height:195px;
+	width:50%;
+	margin:auto;
+	text-align:center;
+	padding-top:90px;
+	box-sizing:border-box;
+	font-size:40px;
+}
+
+/* Div for the paragraph that diaplays the errors in billing info entered by the user. Aligned to left and red color */
+#billingError {
+	text-align:left;
+	color:red;
+}
+
+/* Div for paragraph that displays the errors in address info. Aligned to left and red color */
+#addressError {
+	text-align:left;
+	color:red;
+}
+
+/*Div Container element for the heading. Background color starts off as black and is changed to yellow and green by javascript*/
+#heading {
+	height:38px;
+	width:100%;
+	background-color:black;
+	box-sizing:border-box;
+}
+
+/* Make the images float left. Give each image a width of 25%. There is a 4px border for each image. Use box-sizing property
+   to make the borders included in image width */
+img {
+	float:left;
+	height:90px;
+	width:25%;
+	box-sizing:border-box;
+	border-right:4px solid black;
+}
+
+/* Div Container for all the images used. Red borders and a height of 100px. */
+#images {
+	height:100px;
+	width:100%;
+	border-top:2px solid red;
+	border-bottom:2px solid red;
+	border-left: 2px solid red;
+	border-right:2px solid red;
+	box-sizing:border-box;
+}
+
+/*Center align table*/
+table {
+	width:100%;
+	align:center;
+}
+
+/* Black borders for the table heading and the text is at the center of the cell, which is css default. */
+th {
+	text-align:center;
+    border : 2px solid black;
+	width:33%;
+}
+
+/* Center align table data within cell */
+td {
+	text-align:center;
+}
+
+/* MAke all items displayed in table have a lime background color*/
+#Item {
+	background-color:Lime;
+}
+
+/* MAke all quantity fields displayed in table have a aqua background color.*/
+#Quantity {
+	background-color:Aqua;
+}
+
+/* All size cells in the table have a orange background color*/
+#Size {
+	background-color:Orange;
+}
+
+/* Div container for displaying the condiments. Align this div below the menu div and center align text with a teal background color*/
+#condiments {
+	font-size:15;
+	margin:auto;
+	text-align:center;
+	color:teal;
+}
+
+/* Paragraph for the condiments. Set the condiment text to be red*/
+#condiment
+{
+	text-align:center;
+	color:red;
+}
+	

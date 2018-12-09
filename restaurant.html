@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<!-- Title of the webpage is my restaurant -->
+<title>My Restaurant </title>
+
+<!--External Css and Javascript files used -->
+<link rel = "stylesheet" type="text/css" href="restaurant.css"> 
+<script type="text/javascript" src="restaurant.js"></script>
+</head>
+
+<!--When the webpage loads call the initialize js function -->
+<body onload="initialize();" id="bd">
+<div id="heading">
+<!--Main heading and enclosing div -->
+<h1>KRISHNA's RESTAURANT</h1>
+</div>
+<div id="images">
+<!--All the images used-->
+<img src="fries.jpg" id="img1">
+<img src="pizza.jpg" id="img2">
+<img src="hotdog.jpg" id="img3">
+<img src="wings.jpg" id="img4">
+</div>
+<!-- create a form. All input elements enclosed within this form -->
+<form name="frm">
+<!--Billing info input fields and enclosing div -->
+<div id="billing">
+<u><strong>Billing Information</strong></u><br><br>
+First Name:<br><input type="text" name="firstName" onblur="validateFirstName();"> <br><br>
+Last  Name:<br><input type="text" name="lastName" onblur="validateLastName();"> <br><br>
+Card Number:<br><input type="text" name="cardNumber" onblur="validateCardNumber();" placeholder="xxxx-xxxx-xxxx-xxxx"><br><br>
+Expiry Date :<br><input type="date" name="expiryDate" onblur="validateExpiryDate();" placeholder="mm/yy"><br><br>
+Cvv:<br><input type="text", name="cvv" onblur="validateCvv();" placeholder="xxx"><br><br>
+
+<!--paragraph for error messages-->
+<p id="billingError"></p>
+
+</div>
+
+<!--Address details input fields and enclosing div-->
+<div id="details">
+<u><strong>Address Details</strong></u><br><br>
+House Number:<br>
+<input type="text" name="houseNumber" onblur="validateHouseNumber();"><br><br>
+Street Name:<br>
+<input type="text" name="streetName" onblur="validateStreetName();"><br><br>
+Zip Code:<br>
+<input type="text" name="zipCode" onblur="validateZipCode();" placeholder="xxxxx"><br><br>
+Phone number:<br>
+<input type="text" name="phoneNumber" onblur="validatePhoneNumber();" placeholder="(xxx)xxxxxxx"><br><br>
+<!--paragraph for error messages -->
+<p id="addressError"></p>
+</div>
+
+<!--Table to represent the menu, and the enclosing div-->
+<div id = "menu">
+<table id="tbl">
+<tr>
+<th id = "Item"><strong>ITEM</strong></th>
+<th id="Quantity"><strong>QUANTITY</strong></th>
+<th id="Size"><strong>SIZE</strong></th>
+</tr>
+
+<tr>
+<td id="Item"><strong>French Fries</strong> <!--Item name-->
+<td id="Quantity"><input type="number" name="numFries" value="0" min="0" max="10" onblur="validateQuantity();"></td> <!--Input field for item quantity-->
+<td id="Size"><input type="radio" name="sizeFries" value="small" checked onclick="calculateTotal();">s($2) <!--Radio buttons for choosing the size-->
+              <input type="radio" name="sizeFries" value="medium" onclick="calculateTotal();">m($4)
+              <input type="radio" name="sizeFries" value="large" onclick="calculateTotal();">l($5)
+</td>
+</tr>
+
+<tr>
+<td id="Item"><strong>Pizza Slice</strong>
+<td id="Quantity"><input type="number" name="numPizza" value="0" min="0" max="10" onblur="validateQuantity();"></td> <!--Input field for choosing quantity-->
+<td id="Size"><input type="radio" name="sizePizza" value="small" checked onclick="calculateTotal();">s($4) <!--Radio buttons for choosing size -->
+              <input type="radio" name="sizePizza" value="medium" onclick="calculateTotal();">m($6)
+              <input type="radio" name="sizePizza" value="large" onclick="calculateTotal();">l($9)
+</td>
+</tr>
+
+<tr>
+<td id="Item"><strong>Hot Dog</strong>
+<td id="Quantity"><input type="number" name="numDog" value="0" min="0" max="10" onblur="validateQuantity();"></td>
+<td id="Size"><input type="radio" name="sizeDog" value="small" checked onclick="calculateTotal();">s($1)
+              <input type="radio" name="sizeDog" value="medium" onclick="calculateTotal();">m($3)
+              <input type="radio" name="sizeDog" value="large" onclick="calculateTotal();">l($4)
+</td>
+</tr>
+
+<tr>
+<td id="Item"><strong>Chicken Wings</strong>
+<td id="Quantity"><input type="number" name="numWings" value="0" min="0" max="10" onblur="validateQuantity();"></td>
+<td id="Size"><input type="radio" name="sizeWings" value="small" checked onclick="calculateTotal();">s($5)
+              <input type="radio" name="sizeWings" value="medium" onclick="calculateTotal();">m($8)
+              <input type="radio" name="sizeWings" value="large" onclick="calculateTotal();">l($10)
+</td>
+</tr>
+</table>
+
+<!--Check boxes for selecting condiments -->
+<p id="condiments"><em><u>Condiments</u></em></p> 
+<p id="condiment"><input type="checkbox" name="mayo" id="condiment" value="mayo" onclick="selectMayo();">Mayonaisse($1)
+<input type="checkbox" name="ketchup" id="condiment" onclick="selectKetchup();">Ketchup($1)
+<input type="checkbox" name="seasoning" id="condiment" onclick="selectSeasoning();">Seasoning($1)
+</p>			  
+</div>
+
+<!--Div for representing total-->
+<div id="total">
+<strong><u>Your Total is $0</strong></u>
+</div>
+
+<!--Create a button to submit the order -->
+<div id="submit">
+<strong>Click here to place order.</strong>
+<input type="button" onclick="submission();" value="Order">
+</div>
+</body>
+</html> 
